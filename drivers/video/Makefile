@@ -15,6 +15,10 @@ obj-$(CONFIG_VT)		  += console/
 obj-$(CONFIG_LOGO)		  += logo/
 obj-y				  += backlight/
 
+ifeq ($(CONFIG_ARCH_MSM7X27A),y)
+obj-$(CONFIG_FB_MSM)          += msm_7x27A/
+endif
+
 obj-$(CONFIG_EXYNOS_VIDEO)     += exynos/
 
 obj-$(CONFIG_FB_CFB_FILLRECT)  += cfbfillrect.o
